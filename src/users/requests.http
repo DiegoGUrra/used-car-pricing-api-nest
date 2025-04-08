@@ -1,0 +1,46 @@
+# create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "asda@email.com",
+    "password": "asdas"
+}
+
+
+###signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "asda@email.com",
+    "password": "asdas"
+}
+
+###whoami
+GET http://localhost:3000/auth/whoami
+
+###signout
+POST http://localhost:3000/auth/signout
+
+### get user
+
+GET http://localhost:3000/auth/2
+
+
+### find user with email
+
+GET http://localhost:3000/auth?email=asda@email.com
+
+
+### delete user
+DELETE http://localhost:3000/auth/2
+
+
+###update user
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "password": "bbbb@email.com"
+}
